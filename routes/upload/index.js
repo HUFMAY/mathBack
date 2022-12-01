@@ -2,6 +2,7 @@ const express = require('express')
 const fileUpload = require('express-fileupload')
 const uuid = require('uuid')
 const cors = require('cors')
+const postSchema = require('../../database/schemas/seminar.schema')
 
 const app = express()
 app.use(cors())

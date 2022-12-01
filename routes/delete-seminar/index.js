@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-const postSchema = require('../../database/schemas/post.schema')
+const seminarSchema = require('../../database/schemas/seminar.schema')
 
 app.delete('/:id', async (req, res) => {
     try {
-        const deletePost = await postSchema.deleteOne({_id: req.params.id})
+        const deleteSeminar = await seminarSchema.deleteOne({_id: req.params.id})
         res.send('Deleted').status(200)
     } catch (err) {
         res.status(500).send(err)
